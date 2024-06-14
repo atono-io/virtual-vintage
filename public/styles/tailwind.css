@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body, div, 
+h1, h2, h3, h4, h5, h6, 
+ul, li, p, img {
+	margin:0;
+	padding:0;
+}
+
+img {
+	border:none;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+   font-size: 32px;
+   line-height: 1.2;
+}
+
+h2 {
+   font-size: 28px;
+   line-height: 1.2;
+}
+
+h3 {
+   font-size: 24px;
+   line-height: 1.2;
+}
+
+h4 {
+   font-size: 21px;
+   line-height: 1.2;
+}
+
+h5 {
+   font-size: 18px;
+   line-height: 1.2;
+}
