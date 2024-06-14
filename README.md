@@ -1,4 +1,10 @@
 # virtual-vintage
+
+## install dependancies
+```
+$ npm install
+```
+
 ## Run the app locally with the following command:
 
 ```
