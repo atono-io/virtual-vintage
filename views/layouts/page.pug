@@ -23,21 +23,21 @@ html(lang="en")
     
   body
     main
-      header.text-gray-600.body-font
+      header.text-gray-600.body-font.w-full.header
           .container.mx-auto.flex.flex-wrap.p-5.flex-col.items-center(class='md:flex-row')
             a.flex.items-center.text-gray-900.mb-4(class='md:mb-0' href='/')
               img.h-8(src='/images/logo.svg', alt='logo', class='max-w-[10rem]')
-            nav.flex.flex-wrap.items-center.text-base.justify-center(class='md:mr-auto md:ml-5 md:py-1 md:pl-5')
-            a.mr-10(class='hover:text-blue-900', href='/') Home
-            a.mr-10(class='hover:text-blue-900', href='/catalog') Catalog
-            a.mr-10(class='hover:text-blue-900', href='/') Docs
-            a.mr-10(class='hover:text-blue-900', href='/') Community
-            a.mr-10(class='hover:text-blue-900', href='/') Try it now!
+            nav.flex.flex-wrap.items-end.text-base.justify-center.ml-auto.mr-0(class='md:mr-0 sm:mr-auto')
+              a.mr-10(href='/') Home
+              a.mr-10(href='/catalog', class=`${selected}`) Catalog
+              a.mr-10(href='/') Docs
+              a.mr-10(href='/') Community
+              a(class='hover:text-blue-900', href='/') Try it now!
       block content
   
-      footer.text-gray-600.body-font
+      footer.text-gray-600.body-font.w-full
           div.container.py-10.mx-auto
-            div.flex.items-center.justify-end
+            div.flex.items-center.justify-end.px-5
                 a(href='/')
                   img.h-8(src='/images/logo.svg', alt='logo', class='max-w-[8rem]') 
-                span.pl-3.text-sm.font-medium.text-gray-900 &copy; 2024 Atono Inc.
+                span.pl-3.text-sm.font-medium.text-gray-900 &copy; 2024 Virtual Vintage Inc.

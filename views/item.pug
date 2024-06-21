@@ -1,11 +1,11 @@
 extends layouts/page
 
 block content
-  section.body-font.pt-20.pb-10.max-w-3xl.mx-auto.break-words
+  section.body-font.pt-20.pb-10.max-w-3xl.mx-auto.break-words(class='sm:px-5')
     div.mb-8(class='-mt-6')
-      a.flex.items-center.gap-2(href='/catalog') 
+      a.flex.items-center.gap-2.back-btn(href='/catalog')
         span.text-custom-gray.text-sm < 
-        span.text-custom-gray Catalog
+        span.text.text-custom-gray Catalog
     
     h1.pb-2 #{title}
 
@@ -45,23 +45,23 @@ block content
             div.share-dialog.mr-4(class="hidden")
               div(style="left: 50%").triangle.shadow-lg.mt-2.z-20
               div(style="left: -50%").share-btn.p-8.w-80.bg-white.flex.flex-wrap.gap-6.absolute.top-14.z-10.share-btn.rounded-lg
-                  div.flex.flex-col.items-center
+                  div(class="w-[4.25rem]").flex.flex-col.items-center
                     a(data-id="copy")
                       img(src="/images/copy.svg" alt="Copy").pb-2
                     a(data-id="copy") Copy link
-                  div.flex.flex-col.items-center
+                  div(class="w-[4.25rem]").flex.flex-col.items-center
                     a(data-id="wa") 
                       img(src="/images/whatsapp.svg", alt="WhatsApp").pb-2
                     a(data-id="wa") WhatsApp
-                  div.flex.flex-col.items-center
+                  div(class="w-[4.25rem]").flex.flex-col.items-center
                     a(data-id="tg") 
                       img(src="/images/facebook.svg", alt="Facebook").pb-2
                     a(data-id="fb") Facebook
-                  div.flex.flex-col.items-center
+                  div(class="w-[4.25rem]").flex.flex-col.items-center
                     a(data-id="tw") 
                       img(src="/images/twitter.svg", alt="Twitter").pb-2
                     a(data-id="tw") X
-                  div.flex.flex-col.items-center
+                  div(class="w-[4.25rem]").flex.flex-col.items-center
                     a(data-id="mail") 
                       img(src="/images/email.svg", alt="Mail").pb-2
                     a(data-id="mail") Email

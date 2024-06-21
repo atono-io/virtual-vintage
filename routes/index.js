@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/catalog', function(req, res, next) {
-  res.render('catalog', { title: 'Catalog' });
+  res.render('catalog', { title: 'Catalog', selected: 'selected' });
 });
 
 router.get('/catalog/item([0-9]*)', function(req, res, next) {
@@ -44,7 +44,7 @@ router.get('/catalog/item([0-9]*)', function(req, res, next) {
   
   res.render('item', { 
     title: items[index].title,
-    description: items[index].description,
+    selected: '',
     image: `/images/synth${[req.query.index]}.jpg`,
   });
 });
