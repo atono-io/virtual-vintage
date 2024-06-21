@@ -1,0 +1,15 @@
+HTTP/2 200 
+server: awselb/2.0
+date: Mon, 06 May 2024 17:35:14 GMT
+content-type: application/json
+content-length: 123
+x-flagsmith-document-updated-at: 1715013815.590056
+cache-control: max-age=0
+aws-resource-region: us-west-1
+aws-lambda-region: us-west-1
+access-control-expose-headers: x-flagsmith-document-updated-at
+access-control-allow-credentials: true
+access-control-allow-headers: *
+access-control-allow-origin: *
+
+[{"feature": {"id": 92962, "name": "third_oscillator", "type": "STANDARD"}, "enabled": false, "feature_state_value": null}]

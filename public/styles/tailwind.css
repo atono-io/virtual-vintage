@@ -2,6 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom styles */
+.banner {
+   background-image: url('../images/bg.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+/* share button */
+.share-btn {
+   box-shadow: 0px 30px 109px 0px #0000004D;
+}
+.share-btn a {
+   display: block;
+}
+.share-btn a:hover {
+   cursor: pointer;
+}
+.triangle {
+	position: relative;
+	background-color: white;
+	text-align: left;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  1em;
+	height: 1em;
+	border-top-right-radius: 30%;
+}
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+/* carousel */
+.carousel-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+ 
+.carousel-arrow {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   top: 0;
+   bottom: 0px;
+   margin-block: auto;
+   height: fit-content;
+   width: 30px;
+   background-color: white;
+   border: none;
+   font-size: 3rem;
+   padding: 0;
+   cursor: pointer;
+   opacity: 0.35;
+   transition: opacity 100ms;
+}
+ 
+.carousel-arrow:hover,
+.carousel-arrow:focus {
+   opacity: 0.75;
+}
+ 
+.carousel-arrow--prev {
+   left: 0;
+   border-radius: 0 10px 10px 0;
+}
+ 
+.carousel-arrow--next {
+   right: 0;
+   border-radius: 10px 0 0 10px;
+}
+ 
+.carousel-container {
+   width: 100%;
+   /* padding-block: 16px 32px; */
+
+   overflow-x: hidden;
+   display: flex;
+   width: 100%;
+   gap: 8px;
+   align-items: center;
+   scroll-snap-type: x mandatory;
+   flex-flow: row nowrap;
+   scroll-behavior: smooth;
+}
+ 
+.carousel-slide {
+   flex: 1 0 30%;
+   aspect-ratio: 1;
+   flex-flow: column nowrap;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #bae;
+   scroll-snap-align: center;
+}
+ 
+@media (max-width: 600px) {
+   .carousel-slide {
+     flex: 1 0 90%;
+   }
+}
+
+/* fonts */
+.museomoderno-font {
+   font-family: "MuseoModerno", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500,800;
+   font-style: normal;
+} 
+
+.robotoFlex-font {
+   font-family: "Roboto Flex", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400,500,600,700,800;
+   font-style: normal;
+} 
+
+body {
+   font-family: "Roboto Flex", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 1.6;
+   color: #333;
+}
 
 html, body, div, 
 h1, h2, h3, h4, h5, h6, 
@@ -24,6 +164,11 @@ a {
     list-style: none;
     text-decoration: none;
     color: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
 }
 
 h1 {
@@ -49,4 +194,24 @@ h4 {
 h5 {
    font-size: 18px;
    line-height: 1.2;
+}
+.customers p {
+   color: #555;
+}
+
+/* colours */
+.bg-teal { 
+   background: #91E3ED;
+}
+.bg-deep-teal { 
+   background: #2D5265;
+}
+.bg-peach { 
+   background: #FFEFEB;
+}
+.bg-orange {
+   background: #FF6640
+}
+.text-custom-gray {
+   color: #555;
 }
