@@ -65,28 +65,33 @@ nav a.selected {
 
 /* carousel */
 .carousel-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
+   @media (min-width: 640px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+   }
 }
  
 .carousel-arrow {
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   top: 0;
-   bottom: 0px;
-   margin-block: auto;
-   height: fit-content;
-   width: 30px;
-   background-color: white;
-   border: none;
-   font-size: 3rem;
-   padding: 0;
-   cursor: pointer;
-   opacity: 0.35;
-   transition: opacity 100ms;
+   display: none;
+   @media (min-width: 640px) {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      bottom: 0px;
+      margin-block: auto;
+      height: fit-content;
+      width: 30px;
+      background-color: white;
+      border: none;
+      font-size: 3rem;
+      padding: 0;
+      cursor: pointer;
+      opacity: 0.35;
+      transition: opacity 100ms;
+   }
 }
  
 .carousel-arrow:hover,
@@ -105,36 +110,37 @@ nav a.selected {
 }
  
 .carousel-container {
-   width: 100%;
-   /* padding-block: 16px 32px; */
-
-   overflow-x: hidden;
    display: flex;
-   width: 100%;
+   flex-wrap: wrap;
    gap: 8px;
-   align-items: center;
-   scroll-snap-type: x mandatory;
-   flex-flow: row nowrap;
-   scroll-behavior: smooth;
+   justify-content: center;
+
+   @media (min-width: 640px) {
+      width: 100%;
+      overflow-x: hidden;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: unset;
+      align-items: center;
+      scroll-snap-type: x mandatory;
+      flex-flow: row nowrap;
+      scroll-behavior: smooth;
+   }
 }
  
 .carousel-slide {
-   flex: 1 0 30%;
-   aspect-ratio: 1;
-   flex-flow: column nowrap;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: #bae;
-   scroll-snap-align: center;
-}
- 
-@media (max-width: 600px) {
-   .carousel-slide {
-     flex: 1 0 90%;
+   @media (min-width: 640px) {
+      flex: 1 0 30%;
+      aspect-ratio: 1;
+      flex-flow: column nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      scroll-snap-align: center;
    }
 }
-
+ 
 /* fonts */
 .museomoderno-font {
    font-family: "MuseoModerno", sans-serif;

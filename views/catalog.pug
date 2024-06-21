@@ -1,75 +1,76 @@
 extends layouts/page.pug
 
 block content
-   section.body-font.pt-20.pb-10.max-w-3xl.mx-auto(class='sm:px-5')
-      h3.font-medium.max-w-3xl.mx-auto Catalog
-      p.text-sm Select a synthesizer in our catalog to interface with it using standard MIDI and receive the audio output on demand.
-      
-      div.body-font.pt-6.pb-10.max-w-3xl.mx-auto
-         div.flex.flex-wrap.-m-4
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item1?index=1')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth1.jpg', alt='Aurora Synthex')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Aurora Synthex
-                     p.text-sm "The Aurora Synthex" boasts a striking design inspired by the aurora borealis, with a sleek metallic casing adorned with iridescent panels that shimmer like the dancing lights of the northern skies. 
+   section.body-font.pt-20.pb-10.max-w-3xl.mx-auto.px-5
+      div(class='lg:-mx-5')
+         h3.font-medium.max-w-3xl.mx-auto Catalog
+         p.text-sm Select a synthesizer in our catalog to interface with it using standard MIDI and receive the audio output on demand.
+         
+         div.body-font.pt-6.pb-10.max-w-3xl.mx-auto
+            div.flex.flex-wrap(class='-m-4')
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item1?index=1')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth1.jpg', alt='Aurora Synthex')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Aurora Synthex
+                        p.text-sm "The Aurora Synthex" boasts a striking design inspired by the aurora borealis, with a sleek metallic casing adorned with iridescent panels that shimmer like the dancing lights of the northern skies. 
 
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item2?index=2')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth2.jpg', alt='Solaris Spectra')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Solaris Spectra
-                     p.text-sm At its core, "The Solaris Spectra" features a revolutionary "Solar Oscillator" technology, capable of generating an infinite variety of rich, harmonically complex waveforms.
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item2?index=2')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth2.jpg', alt='Solaris Spectra')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Solaris Spectra
+                        p.text-sm At its core, "The Solaris Spectra" features a revolutionary "Solar Oscillator" technology, capable of generating an infinite variety of rich, harmonically complex waveforms.
 
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item3?index=3')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth3.jpg', alt='Celestial Voyager')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Celestial Voyager
-                     p.text-sm One of the defining features of "The Celestial Voyager" is its "Astro-Modulation Matrix," a sophisticated routing system that allows for complex modulation of parameters such as oscillator pitch, filter cutoff, and envelope settings.
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item4?index=4')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth4.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Neon Nova
-                     p.text-sm Playing "The Neon Nova" is like stepping into a time machine and journeying back to the neon-soaked streets of the 1980s. Its responsive keyboard, crafted from space-age materials, offers a tactile playing experience that invites players to unleash their creativity and embrace the retro-futuristic sounds of the era.
-            
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item5?index=5')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth5.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Cosmosynth 
-                     p.text-sm What truly sets "The Cosmosynth" apart is its celestial filter bank, a resonant network of filters that adds depth and character to the sound. With its sweeping cutoff frequencies and resonant peaks, the filter bank allows musicians to create dynamic textures and evolving timbres that evoke the vastness of space.
-            
-            
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item6?index=6')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth6.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Celestial Harmonicus  
-                     p.text-sm The "Celestial Harmonicus" features a powerful synthesis engine capable of producing a wide range of lush, atmospheric sounds. Its oscillators offer a variety of waveforms, from warm, analog tones to ethereal digital textures, allowing musicians to sculpt rich, dynamic timbres with ease.
-            
-            
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item7?index=7')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth7.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Lunar Beatbox 
-                     p.text-sm What sets "The Lunar Beatbox" apart is its versatility. Equipped with a programmable sequencer, musicians can create intricate rhythms and patterns with ease. The sequencer offers multiple tracks, allowing for layering and arranging of drum patterns to create dynamic compositions.
-            
-            
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item8?index=8')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth8.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Stellar Rhythm  
-                     p.text-sm The true magic of "The Stellar Rhythm" lies in its sonic sculpting capabilities. Equipped with a range of parameter controls including pitch, decay, and resonance, musicians can shape each drum sound to their liking, from thunderous booms to delicate whispers.
-            
-            
-            a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item9?index=9')
-               div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
-                  img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth9.jpg', alt='Synth')
-                  div.p-6
-                     p.text-sm.font-bold.mb-4 Nexus Nova  
-                     p.text-sm The "Nexus Nova" features a state-of-the-art digital synthesis engine, capable of producing an expansive range of sounds that span the spectrum from vintage analog warmth to cutting-edge digital brilliance.
-            
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item3?index=3')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth3.jpg', alt='Celestial Voyager')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Celestial Voyager
+                        p.text-sm One of the defining features of "The Celestial Voyager" is its "Astro-Modulation Matrix," a sophisticated routing system that allows for complex modulation of parameters such as oscillator pitch, filter cutoff, and envelope settings.
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item4?index=4')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth4.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Neon Nova
+                        p.text-sm Playing "The Neon Nova" is like stepping into a time machine and journeying back to the neon-soaked streets of the 1980s. Its responsive keyboard, crafted from space-age materials, offers a tactile playing experience that invites players to unleash their creativity and embrace the retro-futuristic sounds of the era.
+               
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item5?index=5')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth5.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Cosmosynth 
+                        p.text-sm What truly sets "The Cosmosynth" apart is its celestial filter bank, a resonant network of filters that adds depth and character to the sound. With its sweeping cutoff frequencies and resonant peaks, the filter bank allows musicians to create dynamic textures and evolving timbres that evoke the vastness of space.
+               
+               
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item6?index=6')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth6.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Celestial Harmonicus  
+                        p.text-sm The "Celestial Harmonicus" features a powerful synthesis engine capable of producing a wide range of lush, atmospheric sounds. Its oscillators offer a variety of waveforms, from warm, analog tones to ethereal digital textures, allowing musicians to sculpt rich, dynamic timbres with ease.
+               
+               
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item7?index=7')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth7.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Lunar Beatbox 
+                        p.text-sm What sets "The Lunar Beatbox" apart is its versatility. Equipped with a programmable sequencer, musicians can create intricate rhythms and patterns with ease. The sequencer offers multiple tracks, allowing for layering and arranging of drum patterns to create dynamic compositions.
+               
+               
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item8?index=8')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth8.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Stellar Rhythm  
+                        p.text-sm The true magic of "The Stellar Rhythm" lies in its sonic sculpting capabilities. Equipped with a range of parameter controls including pitch, decay, and resonance, musicians can shape each drum sound to their liking, from thunderous booms to delicate whispers.
+               
+               
+               a.p-4(class='md:w-1/3 hover:no-underline hover:no-focus', href='/catalog/item9?index=9')
+                  div.h-full.bg-gray-100.rounded-lg.overflow-hidden(class='hover:shadow-md')
+                     img.w-full.object-cover.object-center.bg-gray-100(class='lg:h-48 md:h-36', src='/images/synth9.jpg', alt='Synth')
+                     div.p-6
+                        p.text-sm.font-bold.mb-4 Nexus Nova  
+                        p.text-sm The "Nexus Nova" features a state-of-the-art digital synthesis engine, capable of producing an expansive range of sounds that span the spectrum from vintage analog warmth to cutting-edge digital brilliance.
+               

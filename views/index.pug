@@ -4,7 +4,7 @@ block content
       div.relative.overflow-hidden.pb-28.h-64
          div.flex.absolute.w-full
             div.w-full.h-64.banner
-      div.bg-white
+      div.bg-white.px-5(class='md:-mx-5')
          div.w-full.max-w-2xl.mx-auto.rounded-lg.shadow-xl.z-20.bg-deep-teal.relative(class='-mt-28')
             div.text-white.text-center.px-10.py-8(class='max-w-22rem')
                h1.mb-3 Welcome to Virtual Vintage!
@@ -15,25 +15,26 @@ block content
                | Synthex?  Although many of us have home studios and can make great music with software tools, there is some magic missing that only real hardware can provide. 
                | Sadly many classic synthesizers are becoming more rare and consequently expensive, which puts them out of reach for most musicians and hobbyists.  Thankfully we have a solution for you!
 
-   section.body-font.pt-20.pb-10.max-w-3xl.mx-auto
-      h3.max-w-3xl.mx-auto Browse our Catalog
-      p.pb-10 We have a studio full of vintage synthesizers that we want to make available to you virtually, in real-time. Using our web application you can interface with synthesizers in our catalog using standard MIDI and receive the audio output on demand.
-      
-      div.carousel-wrapper(class='-mt-2')
-         button.carousel-arrow.carousel-arrow--prev(class='sr-only', aria-label='Previous')
-            span(class="-mt-2") &lsaquo;
-         button.carousel-arrow.carousel-arrow--next(aria-label='Next')
-            span(class="-mt-2") &rsaquo;
-         .carousel-container.py-2(dir='ltr')
-            .carousel-slide.rounded-lg(class='hover:shadow-md')
-               a(href='/catalog/item1?index=1')
-                  img.rounded-lg(src='/images/synth01.jpg', alt='Synth')
-            .carousel-slide.rounded-lg(class='hover:shadow-md')
-               a(href='/catalog/item9?index=9')
-                  img.rounded-lg(src='/images/synth02.jpg', alt='Synth')
-            .carousel-slide.rounded-lg(class='hover:shadow-md')
-               a(href='/catalog/item4?index=4')
-                  img.rounded-lg(src='/images/synth03.jpg', alt='Synth')
-            .carousel-slide.rounded-lg(class='hover:shadow-md')
-               a(href='/catalog/item5?index=5')
-                  img.rounded-lg(src='/images/synth04.jpg', alt='Synth')
+   section.body-font.pt-20.pb-10.max-w-3xl.mx-auto.px-5
+      div(class='lg:-mx-5')
+         h3.max-w-3xl.mx-auto Browse our Catalog
+         p.pb-10 We have a studio full of vintage synthesizers that we want to make available to you virtually, in real-time. Using our web application you can interface with synthesizers in our catalog using standard MIDI and receive the audio output on demand.
+         
+         div.carousel-wrapper(class='-mt-2')
+            button.carousel-arrow.carousel-arrow--prev(class='sr-only', aria-label='Previous')
+               span(class="-mt-2") &lsaquo;
+            button.carousel-arrow.carousel-arrow--next(aria-label='Next')
+               span(class="-mt-2") &rsaquo;
+            .carousel-container.py-2(dir='ltr')
+               .carousel-slide.rounded-lg(class='hover:shadow-md')
+                  a(href='/catalog/item1?index=1')
+                     img.rounded-lg(src='/images/synth01.jpg', alt='Synth')
+               .carousel-slide.rounded-lg(class='hover:shadow-md')
+                  a(href='/catalog/item9?index=9')
+                     img.rounded-lg(src='/images/synth02.jpg', alt='Synth')
+               .carousel-slide.rounded-lg(class='hover:shadow-md')
+                  a(href='/catalog/item4?index=4')
+                     img.rounded-lg(src='/images/synth03.jpg', alt='Synth')
+               .carousel-slide.rounded-lg(class='hover:shadow-md')
+                  a(href='/catalog/item5?index=5')
+                     img.rounded-lg(src='/images/synth04.jpg', alt='Synth')

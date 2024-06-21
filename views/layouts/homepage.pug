@@ -34,60 +34,61 @@ html(lang="en")
 
   body
     main
-      header.text-gray-600.body-font.bg-teal.w-full.header
-          .container.mx-auto.flex.flex-wrap.p-5.flex-col.items-center(class='md:flex-row')
+      header.text-gray-600.body-font.bg-teal.w-full.header.p-5
+        div(class='lg:-mx-4')
+          .container.mx-auto.flex.flex-wrap.flex-col.items-center(class='md:flex-row')
             a.flex.items-center.text-gray-900.mb-4(class='md:mb-0' href='/')
               img.h-8(src='/images/logo.svg', alt='logo', class='max-w-[10rem]')
-            nav.flex.flex-wrap.items-end.text-base.justify-center.ml-auto.mr-0(class='-mt-2 md:mr-0 sm:mr-auto')
+            nav.flex.flex-wrap.items-end.text-base.justify-center.ml-auto.ml-auto(class='-mt-2 md:-mr-10 mr-auto')
               a.mr-10.selected(href='/') Home
               a.mr-10(href='/catalog') Catalog
               a.mr-10(href='/') Docs
               a.mr-10(href='/') Community
-              a(href='/') Try it now!
+              a.mr-10(href='/') Try it now!
       block content
       
     div.bg-peach
-      section.body-font.max-w-3xl.mx-auto.pt-20.mt-1
-          h3.max-w-3xl.mx-auto Join our illustrious customer base!
-          div.container.px-5.py-10.mx-auto.customers
-            div.flex.-mx-7
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
-                  div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician1.jpg', alt='image')
-                      p N3oB3atZ
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
+      section.body-font.max-w-3xl.mx-auto.pt-20.mt-1.px-5
+        div(class='lg:-mx-5')
+            h3.max-w-3xl.mx-auto Join our illustrious customer base!
+            div.container.px-5.py-10.mx-auto.customers
+              div.flex.flex-wrap.-mx-7
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
                     div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician2.jpg', alt='image')
-                      p S1renX
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
+                        img.h-10.bg-gray-100(src='/images/musician1.jpg', alt='image')
+                        p N3oB3atZ
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
+                      div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
+                        img.h-10.bg-gray-100(src='/images/musician2.jpg', alt='image')
+                        p S1renX
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
+                      div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
+                        img.h-10.bg-gray-100(src='/images/musician3.jpg', alt='image')
+                        p MetroMix
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
                     div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician3.jpg', alt='image')
-                      p MetroMix
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
-                  div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician4.jpg', alt='image')
-                      p PsySonic
-            div.flex.-mx-7
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
-                  div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician5.jpg', alt='image')
-                      p Raiya Kuroshim
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
+                        img.h-10.bg-gray-100(src='/images/musician4.jpg', alt='image')
+                        p PsySonic
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
                     div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician6.jpg', alt='image')
-                      p Maja Svensson
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
+                        img.h-10.bg-gray-100(src='/images/musician5.jpg', alt='image')
+                        p Raiya Kuroshim
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
+                      div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
+                        img.h-10.bg-gray-100(src='/images/musician6.jpg', alt='image')
+                        p Maja Svensson
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
+                      div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
+                        img.h-10.bg-gray-100(src='/images/musician7.jpg', alt='image')
+                        p Nightshade
+                  a.p-2(class='lg:w-1/4 md:w-1/3 w-1/2 hover:no-underline hover:no-focus', href='/')
                     div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician7.jpg', alt='image')
-                      p Nightshade
-                a.p-2(class='md:w-1/3 hover:no-underline hover:no-focus', href='/')
-                  div.flex.overflow-hidden.border.border-gray-500.rounded-lg.items-center.gap-2(class='hover:shadow-xl')
-                      img.h-10.bg-gray-100(src='/images/musician8.jpg', alt='image')
-                      p Azt3ch
+                        img.h-10.bg-gray-100(src='/images/musician8.jpg', alt='image')
+                        p Azt3ch
 
       footer.text-gray-600.body-font
-          div.container.py-10.mx-auto
-            div.flex.items-center.justify-end
+          div.container.py-10.mx-auto.px-5
+            div.flex.flex-wrap.items-center.justify-end(class='lg:-mx-4')
               a(href='/')
                 img.h-8(src='/images/logo.svg', alt='logo', class='max-w-[8rem]') 
               span.pl-3.text-sm.font-medium.text-gray-900 &copy; 2024 Virtual Vintage Inc.
