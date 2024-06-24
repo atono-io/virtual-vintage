@@ -15,6 +15,36 @@ block content
                | Synthex?  Although many of us have home studios and can make great music with software tools, there is some magic missing that only real hardware can provide. 
                | Sadly many classic synthesizers are becoming more rare and consequently expensive, which puts them out of reach for most musicians and hobbyists.  Thankfully we have a solution for you!
 
+   div.absolute(id="tdk")
+      div.inline-block.relative
+         div.inline-block.relative
+            button(class="hover:shadow-md share-button" id="share").flex-shrink-0.border-transparent.bg-deep-teal.text-white.py-2.px-4.rounded-lg Share your preset
+            div(class="pb-0.5 pt-1 px-1.5").text-xs.absolute.-right-6.-top-2.flex-shrink-0.border-transparent.bg-orange.text-white.rounded New
+         
+         div.share-dialog.mr-4(class="hidden")
+            div(style="left: 50%").triangle.shadow-lg.mt-2.z-20
+            div(style="left: -50%").share-btn.p-8.w-80.bg-white.flex.flex-wrap.gap-6.absolute.top-14.z-10.share-btn.rounded-lg
+               div(class="w-[4.25rem]").flex.flex-col.items-center
+                  a(data-id="copy")
+                  img(src="/images/copy.svg" alt="Copy").pb-2
+                  a(data-id="copy") Copy link
+               div(class="w-[4.25rem]").flex.flex-col.items-center
+                  a(data-id="wa") 
+                  img(src="/images/whatsapp.svg", alt="WhatsApp").pb-2
+                  a(data-id="wa") WhatsApp
+               div(class="w-[4.25rem]").flex.flex-col.items-center
+                  a(data-id="tg") 
+                  img(src="/images/facebook.svg", alt="Facebook").pb-2
+                  a(data-id="fb") Facebook
+               div(class="w-[4.25rem]").flex.flex-col.items-center
+                  a(data-id="tw") 
+                  img(src="/images/twitter.svg", alt="Twitter").pb-2
+                  a(data-id="tw") X
+               div(class="w-[4.25rem]").flex.flex-col.items-center
+                  a(data-id="mail") 
+                  img(src="/images/email.svg", alt="Mail").pb-2
+                  a(data-id="mail") Email
+
    section.body-font.pt-20.pb-10.max-w-3xl.mx-auto.px-5
       div(class='lg:-mx-5')
          h3.max-w-3xl.mx-auto Browse our Catalog
@@ -38,3 +68,7 @@ block content
                .carousel-slide.rounded-lg(class='hover:shadow-md')
                   a(href='/catalog/item5?index=5')
                      img.rounded-lg(src='/images/synth04.jpg', alt='Synth')
+      script.
+         document.getElementById("tdk").style.visibility = "hidden";
+         console.log('atono_third_osc_enabled', atono_third_osc_enabled)
+         

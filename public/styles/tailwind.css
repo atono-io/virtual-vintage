@@ -165,6 +165,10 @@ body {
    color: #333;
 }
 
+b {
+   font-weight: 700;
+}
+
 html, body, div, 
 h1, h2, h3, h4, h5, h6, 
 ul, li, p, img {
