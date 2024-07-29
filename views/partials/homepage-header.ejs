@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+        <title><%= locals.title %></title>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link href="../styles/tailwind.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000"
+            rel="stylesheet"
+        />
+        <script type="text/javascript">
+            window.addEventListener('DOMContentLoaded', function() {
+               const carousel = document.querySelector(".carousel-container");
+               const slide = document.querySelector(".carousel-slide");
+               const prev = document.querySelector('.carousel-arrow--prev');
+               const next = document.querySelector('.carousel-arrow--next');
+
+               prev.addEventListener('click', async () => {
+                  const slideWidth = slide.clientWidth;
+                  carousel.scrollLeft = carousel.scrollLeft - slideWidth;
+                  prev.classList.toggle("sr-only");
+                  next.classList.toggle("sr-only");
+               });
+               next.addEventListener('click', async () => {
+                  const slideWidth = slide.clientWidth;
+                  carousel.scrollLeft = carousel.scrollLeft + slideWidth;
+                  prev.classList.toggle("sr-only");
+                  next.classList.toggle("sr-only");
+               });
+            }, false);
+        </script>
+    </head>
+    <body>
+        <main>
+            <header class="text-gray-600 body-font bg-teal w-full header p-5">
+                <div class="xl:-mx-5">
+                    <div
+                        class="container mx-auto flex flex-wrap flex-col items-center md:flex-row"
+                    >
+                        <a
+                            class="flex items-center text-gray-900 mb-4 md:mb-0"
+                            href="/"
+                        >
+                            <img
+                                class="h-8 max-w-[10rem]"
+                                src="/images/logo.svg"
+                                alt="logo"
+                            />
+                        </a>
+                        <nav
+                            class="flex flex-wrap items-end text-base justify-center ml-auto ml-auto -mt-2 md:-mr-10 mr-auto"
+                        >
+                            <a class="mr-10 selected" href="/">Home</a>
+                            <a class="mr-10" href="/catalog">Catalog</a>
+                            <a class="mr-10" href="/">Docs</a>
+                            <a class="mr-10" href="/">Community</a>
+                            <a class="mr-10" href="/">Try it now!</a>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        
+       

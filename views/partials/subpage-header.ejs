@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+        <title></title>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link href="../styles/tailwind.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000"
+            rel="stylesheet"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/share-buttons/dist/share-buttons.js"
+            async
+        ></script>
+    </head>
+    <body>
+        <main>
+            <header class="text-gray-600 body-font w-full header p-5">
+                <div class="xl:-mx-5">
+                    <div
+                        class="container mx-auto flex flex-wrap flex-col items-center md:flex-row"
+                    >
+                        <a
+                            class="flex items-center text-gray-900 mb-4 md:mb-0"
+                            href="/"
+                        >
+                            <img
+                                class="h-8 max-w-[10rem]"
+                                src="/images/logo.svg"
+                                alt="logo"
+                            />
+                        </a>
+                        <nav
+                            class="flex flex-wrap items-end text-base justify-center ml-auto -mt-2 md:-mr-10 mr-auto"
+                        >
+                            <a class="mr-10" href="/">Home</a>
+                            <a class="mr-10 <%= locals.selected %>" href="/catalog">
+                                Catalog
+                            </a>
+                            <a class="mr-10" href="/">Docs</a>
+                            <a class="mr-10" href="/">Community</a>
+                            <a class="mr-10 hover:text-blue-900" href="/">
+                                Try it now!
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            

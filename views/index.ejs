@@ -1,0 +1,90 @@
+<%- include ("./partials/homepage-header.ejs") %>
+    <div>
+        <div class="relative overflow-hidden pb-28 h-64">
+            <div class="flex absolute w-full">
+                <div class="w-full h-64 banner"></div>
+            </div>
+        </div>
+        <div class="bg-white px-5 md:-mx-5">
+            <div class="w-full max-w-2xl mx-auto rounded-lg shadow-xl z-20 bg-deep-teal relative -mt-28">
+                <div class="text-white text-center px-10 py-8 max-w-22rem">
+                    <h1 class="mb-3">Welcome to Virtual Vintage!</h1>
+                    <span class="flex pt-3"></span>
+                    Have you ever wanted to play a
+                    <b>Neon Nova, Solaris Spectre,</b>
+                    <b>or Aurora</b>
+                    Synthex? Although many of us have home studios and can make
+                    great music with software tools, there is some magic missing
+                    that only real hardware can provide. Sadly many classic
+                    synthesizers are becoming more rare and consequently expensive,
+                    which puts them out of reach for most musicians and hobbyists.
+                    Thankfully we have a solution for you!
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="body-font pt-20 pb-10 max-w-3xl mx-auto px-5">
+        <div class="lg:-mx-5">
+            <h3 class="max-w-3xl mx-auto">Browse our Catalog</h3>
+            <p class="pb-10">
+                We have a studio full of vintage synthesizers that we want to make
+                available to you virtually, in real-time. Using our web application
+                you can interface with synthesizers in our catalog using standard
+                MIDI and receive the audio output on demand.
+            </p>
+            <div class="carousel-wrapper -mt-2">
+                <button
+                    class="carousel-arrow carousel-arrow--prev sr-only"
+                    aria-label="Previous"
+                >
+                    <span class="-mt-2">&lsaquo;</span>
+                </button>
+                <button
+                    class="carousel-arrow carousel-arrow--next"
+                    aria-label="Next"
+                >
+                    <span class="-mt-2">&rsaquo;</span>
+                </button>
+                <div class="carousel-container py-2" dir="ltr">
+                    <div class="carousel-slide rounded-lg hover:shadow-md">
+                        <a href="/catalog/item1?i=1">
+                            <img
+                                class="rounded-lg"
+                                src="/images/synth01.jpg"
+                                alt="Synth"
+                            />
+                        </a>
+                    </div>
+                    <div class="carousel-slide rounded-lg hover:shadow-md">
+                        <a href="/catalog/item9?i=9">
+                            <img
+                                class="rounded-lg"
+                                src="/images/synth02.jpg"
+                                alt="Synth"
+                            />
+                        </a>
+                    </div>
+                    <div class="carousel-slide rounded-lg hover:shadow-md">
+                        <a href="/catalog/item4?i=4">
+                            <img
+                                class="rounded-lg"
+                                src="/images/synth03.jpg"
+                                alt="Synth"
+                            />
+                        </a>
+                    </div>
+                    <div class="carousel-slide rounded-lg hover:shadow-md">
+                        <a href="/catalog/item5?i=5">
+                            <img
+                                class="rounded-lg"
+                                src="/images/synth04.jpg"
+                                alt="Synth"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include ("./partials/homepage-footer.ejs") %>

@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom styles */
+header > .container, footer > .container {
+   max-width: 1200px;
+}
+header nav a, .back-btn span {
+   padding-top: 13px;
+   display: block;
+   padding-bottom: 13px;
+}
+.header nav a:hover, .header nav a:focus,
+.back-btn span.text:hover, .back-btn span.text:focus,
+nav a.selected {
+   color: #333;
+   padding-bottom: 10px;
+   border-bottom: 3px #333 solid;
+}
+.banner {
+   background-image: url('../images/bg.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/* share button */
+.share-btn {
+   box-shadow: 0px 30px 109px 0px #0000004D;
+}
+.share-btn a {
+   display: block;
+}
+.share-btn a:hover {
+   cursor: pointer;
+}
+.triangle {
+	position: relative;
+	background-color: white;
+	text-align: left;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  1em;
+	height: 1em;
+	border-top-right-radius: 30%;
+}
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+/* carousel */
+.carousel-wrapper {
+   @media (min-width: 640px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+   }
+}
+ 
+.carousel-arrow {
+   display: none;
+   @media (min-width: 640px) {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      bottom: 0px;
+      margin-block: auto;
+      height: fit-content;
+      width: 30px;
+      background-color: white;
+      border: none;
+      font-size: 3rem;
+      padding: 0;
+      cursor: pointer;
+      opacity: 0.35;
+      transition: opacity 100ms;
+   }
+}
+ 
+.carousel-arrow:hover,
+.carousel-arrow:focus {
+   opacity: 0.75;
+}
+ 
+.carousel-arrow--prev {
+   left: 0;
+   border-radius: 0 10px 10px 0;
+}
+ 
+.carousel-arrow--next {
+   right: 0;
+   border-radius: 10px 0 0 10px;
+}
+ 
+.carousel-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   justify-content: center;
+
+   @media (min-width: 640px) {
+      width: 100%;
+      overflow-x: hidden;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: unset;
+      align-items: center;
+      scroll-snap-type: x mandatory;
+      flex-flow: row nowrap;
+      scroll-behavior: smooth;
+   }
+}
+ 
+.carousel-slide {
+   @media (min-width: 640px) {
+      flex: 1 0 30%;
+      aspect-ratio: 1;
+      flex-flow: column nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      scroll-snap-align: center;
+   }
+}
+ 
+/* fonts */
+.museomoderno-font {
+   font-family: "MuseoModerno", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500,800;
+   font-style: normal;
+} 
+
+.robotoFlex-font {
+   font-family: "Roboto Flex", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400,500,600,700,800;
+   font-style: normal;
+} 
+
+body {
+   font-family: "Roboto Flex", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 300;
+   font-style: normal;
+   line-height: 1.6;
+   color: #333;
+}
+
+b {
+   font-weight: 700;
+}
+
+html, body, div, 
+h1, h2, h3, h4, h5, h6, 
+ul, li, p, img {
+	margin:0;
+	padding:0;
+}
+
+img {
+	border:none;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "MuseoModerno", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+   font-size: 32px;
+   line-height: 1.2;
+}
+
+h2 {
+   font-size: 28px;
+   line-height: 1.2;
+}
+
+h3 {
+   font-size: 24px;
+   line-height: 1.2;
+}
+
+h4 {
+   font-size: 21px;
+   line-height: 1.2;
+}
+
+h5 {
+   font-size: 18px;
+   line-height: 1.2;
+}
+.customers p {
+   color: #555;
+}
+
+/* colours */
+.bg-teal { 
+   background: #91E3ED;
+}
+.bg-deep-teal { 
+   background: #2D5265;
+}
+.bg-peach { 
+   background: #FFEFEB;
+}
+.bg-orange {
+   background: #FF6640
+}
+.text-custom-gray {
+   color: #555;
+}
