@@ -7,7 +7,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "@atono-io/web-sdk": "^0.2.5",
+    "@atono-io/web-sdk": "*",
     "autoprefixer": "^10.4.19",
     "child_process": "^1.0.2",
     "cookie-parser": "~1.4.4",

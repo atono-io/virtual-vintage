@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="absolute" id="tdk">
+                    <div class="absolute" id="share_preset_button">
                         <div class="inline-block relative">
                             <div class="inline-block relative">
                                 <button
@@ -189,14 +189,14 @@
         </div>
     </section>
 
-    <% if (locals.atono_third_osc_enabled) { %>
+    <% if (!locals.share_preset) { %>
         <script>
-            document.getElementById("tdk").style.visibility = "hidden";
-            console.log('atono_third_osc_enabled', <%= locals.atono_third_osc_enabled %>)
+            document.getElementById("share_preset_button").style.visibility = "hidden";
+            console.log('share_preset', <%= locals.share_preset %>)
         </script>
 
     <% } %>
-    <% if (!locals.atono_third_osc_enabled) { %>
+    <% if (locals.share_preset) { %>
         <script type="text/javascript">
             window.addEventListener('DOMContentLoaded', function() {
               const btn = document.querySelector(".share-button");
