@@ -4,7 +4,7 @@ const path = require('path')
 var app = express();
 
 const AtonoSDK = require('@atono-io/web-sdk')
-const atono = AtonoSDK.Client.fromEnvironmentKey(
+const atono = AtonoSDK.ClientSdk.fromEnvironmentKey(
     'csNRyOl0huBkSqJIQrsKmgZWaN5YBVizx28mRrJ75rDc',
     { apiBaseUrl: 'https://api.test.atono.io' }
 );
@@ -51,10 +51,10 @@ app
 
 	.set('view engine', 'ejs')
 	.get('/', async (req, res) => {
-		const featureFlags = await atono.getFeatureFlags();
+		const featureFlags = await atono.getFeatureFlagsClient();
 		let share_preset = false;
 		try {
-			share_preset = featureFlags.getBooleanValue('share-preset', false)
+			share_preset = featureFlags.getBooleanValue('share_preset', false)
 			res.render(
 				'index', 
 				{ 
@@ -71,10 +71,10 @@ app
 		console.log(`share_preset on index.ejs: ${share_preset}`);
 	})
 	.get('/catalog', async (req, res) => {
-		const featureFlags = await atono.getFeatureFlags();
+		const featureFlags = await atono.getFeatureFlagsClient();
 		let share_preset = false;
 		try {
-			share_preset = featureFlags.getBooleanValue('share-preset', false)
+			share_preset = featureFlags.getBooleanValue('share_preset', false)
 			res.render(
 				'catalog', 
 				{ 
@@ -92,10 +92,10 @@ app
 	})
 	.get('/catalog/item([0-9]*)', async (req, res) => {
 		const i = req.query.i - 1;
-		const featureFlags = await atono.getFeatureFlags();
+		const featureFlags = await atono.getFeatureFlagsClient();
 		let share_preset = false;
 		try {
-			share_preset = featureFlags.getBooleanValue('share-preset', false)
+			share_preset = featureFlags.getBooleanValue('share_preset', false)
 			res.render('item', { 
 				share_preset,
 				title: items[i].title,
