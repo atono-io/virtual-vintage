@@ -3,13 +3,11 @@ const express = require('express')
 const path = require('path')
 var app = express();
 
-const AtonoSDK = require('@atono-io/web-sdk')
-const atono = AtonoSDK.ClientSdk.fromEnvironmentKey(
+const { Atono } =  require('@atono-io/web-sdk');
+const atono = Atono.fromEnvironmentKey(
     'csNRyOl0huBkSqJIQrsKmgZWaN5YBVizx28mRrJ75rDc',
     { apiBaseUrl: 'https://api.test.atono.io' }
 );
-
-const { featureFlags } = atono;
 
 const PORT = process.env.PORT || 5001
 
@@ -42,8 +40,6 @@ const items = [
 	  title: 'Nexus Nova',
 	},
 ];
- 
-
 
 app
 	.use(express.static(path.join(__dirname, 'public')))
@@ -51,7 +47,7 @@ app
 
 	.set('view engine', 'ejs')
 	.get('/', async (req, res) => {
-		const featureFlags = await atono.getFeatureFlagsClient();
+        const featureFlags = await atono.getFeatureFlags();
 		let share_preset = false;
 		try {
 			share_preset = featureFlags.getBooleanValue('share_preset', false)
