@@ -67,7 +67,7 @@ app
 		console.log(`share_preset on index.ejs: ${share_preset}`);
 	})
 	.get('/catalog', async (req, res) => {
-		const featureFlags = await atono.getFeatureFlagsClient();
+		const featureFlags = await atono.getFeatureFlags();
 		let share_preset = false;
 		try {
 			share_preset = featureFlags.getBooleanValue('share_preset', false)
@@ -88,7 +88,7 @@ app
 	})
 	.get('/catalog/item([0-9]*)', async (req, res) => {
 		const i = req.query.i - 1;
-		const featureFlags = await atono.getFeatureFlagsClient();
+		const featureFlags = await atono.getFeatureFlags();
 		let share_preset = false;
 		try {
 			share_preset = featureFlags.getBooleanValue('share_preset', false)
