@@ -1,4 +1,6 @@
-# virtual-vintage
+# [deprecated] virtual-vintage
+
+This repository is no longer used. For the current Virtual Vintage see https://github.com/atono-io/sdk-demo-reactjs-virtual-vintage
 
 ## install dependancies
 ```
